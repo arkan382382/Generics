@@ -6,7 +6,7 @@
  * Typy generyczne:
  * http://ggoralski.pl/?p=1892
  
- CHECK: http://www.geeksforgeeks.org/wrapper-classes-java/
+ CHECK: http://www.geeksforgeeks.org/wrapper-classes-java/         very good explain
  */
 public class GenericsTest {
     public static void main(String[] args){
