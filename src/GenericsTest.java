@@ -27,7 +27,7 @@ public class GenericsTest {
         temp_one.drukuj(imiona);
         temp_one.drukuj(liczby);
         temp_one.drukuj(odpowiedzi);
-
+                                                            // Funkcja drukuj z zablokowaną opocją na String/Integer) 
         String e1 = "cat";                                                          //  [ 2 ]
         String e2 = "dog";
         Integer e3 = 123;
