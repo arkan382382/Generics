@@ -1,3 +1,5 @@
+import com.sun.deploy.util.ArrayUtil;
+
 /**
  * Created by arkan on 03.05.2017.
  *
@@ -29,6 +31,24 @@ public class GenericsTest {
         temp_one.drukuj(imiona);
         temp_one.drukuj(liczby);
         temp_one.drukuj(odpowiedzi);
+      //  temp_one.printOnlyInteger(odpowiedzi); // error because function is prepared only for integer type
+
+        temp_one.printOnlyInteger(liczby);
+        int[] values = {2, 2, 2};
+
+        Integer[] valval = new Integer[values.length];  // autoboxing from obj[] <= primitive[]
+        int ii=0;
+        for(int value : values){
+            valval[ii++] = Integer.valueOf(value);
+        }                                               // end
+
+        temp_one.printOnlyInteger(valval);
+
+        Integer i = new Integer(12);
+        int a = i;                          // unboxing!!   primitive <- Obj
+
+        int b = 25;
+        Integer ttt = b;                    // autoboxing!! Obj <- primitive
 
         String e1 = "cat";                                                          //  [ 2 ]
         String e2 = "dog";
@@ -50,6 +70,12 @@ class Generyczne{                                                   // [ 1 ]
         for(T element : tablica){
             System.out.println("Element: " + element);
         }
+    }
+    public <T extends Integer> void printOnlyInteger(T[] tab){
+        System.out.println("Class: " + tab.getClass());
+        for(T elem : tab){
+            System.out.println("element: " + elem);
+            }
     }
 }
 
