@@ -34,13 +34,17 @@ public class GenericsTest {
       //  temp_one.printOnlyInteger(odpowiedzi); // error because function is prepared only for integer type
 
         temp_one.printOnlyInteger(liczby);
-        int[] values = {2, 2, 2};
+        int[] values = {222, 333, 444};
 
         Integer[] valval = new Integer[values.length];  // autoboxing from obj[] <= primitive[]
         int ii=0;
         for(int value : values){
             valval[ii++] = Integer.valueOf(value);
         }                                               // end
+        for(int x=0; x<values.length; x++) {        // check if working
+            System.out.println(valval[x]);
+        }
+
 
         temp_one.printOnlyInteger(valval);
 
